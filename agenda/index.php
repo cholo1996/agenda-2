@@ -44,28 +44,28 @@
           <div class="modal-body">
             <div class="container-fluid">
 
-			<form action="conn.php" method="post">
+			<form id="form_evento" action="conn.php" method="post">
 
               <div class="mb-3 visually-hidden ">
-                <label for="id" class="form-label">ID:</label>
+                <label for="Id" class="form-label">ID:</label>
                 <input type="text"
-                  class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="ID">
+                  class="form-control" name="Id" id="Id" aria-describedby="helpId" placeholder="ID">
               </div>
 
               <div class="mb-3">
-                <label for="titulo" class="form-label">Título</label>
+                <label for="Titulo" class="form-label">Título</label>
                 <input type="text"
-                  class="form-control" name="title" id="title" aria-describedby="helpId" placeholder="Título">
+                  class="form-control" name="Titulo" id="Titulo" aria-describedby="helpId" placeholder="Título">
 
 				  <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripción</label>
-                <textarea class="form-control" name="descripcion" id="descripcion" rows="3"></textarea>
+                <label for="Descripcion" class="form-label">Descripción</label>
+                <textarea class="form-control" name="Descripcion" id="Descripcion" rows="3"></textarea>
               </div>
 
 			  <div class="form-group">
-					<label for="color" class="col-sm-2 control-label">Color</label>
+					<label for="Color" class="col-sm-2 control-label">Color</label>
 					<div class="col-sm-10">
-					  <select name="color" class="form-control" id="color">
+					  <select name="Color" class="form-control" id="Color">
 						  <option value="">Seleccionar</option>
 						  <option style="color:#0071c5;" value="#0071c5">&#9724; Azul oscuro</option>
 						  <option style="color:#40E0D0;" value="#40E0D0">&#9724; Turquesa</option>
@@ -77,9 +77,9 @@
 						</select>
 
 						<div class="form-group">
-					<label for="listado" class="col-sm-2 control-label">listado</label>
+					<label for="Listado" class="col-sm-2 control-label">Listado</label>
 					<div class="col-sm-10">
-					  <select name="listado" class="form-control" id="listado">
+					  <select name="Listado" class="form-control" id="Listado">
 						  <option value="zte">zte</option>
                          <option value="nokia">nokia</option>
                          <option value="dell">dell</option>
@@ -90,13 +90,13 @@
 
 
 						 <div class="mb-3">
-                    <label for="end">fecha final</label>
-                    <input id="end" type="datetime-local" name="fecha final" />
+                    <label for="Fecha_Inicio">Fecha Inicio</label>
+                    <input id="Fecha_Inicio" type="datetime-local" name="Fecha_Inicio" />
                     </div>
 
 			        <div class="mb-3">
-                    <label for="end">fecha final</label>
-                    <input id="end" type="datetime-local" name="fecha final" />
+                    <label for="Fecha_Fin">Fecha Fin</label>
+                    <input id="Fecha_Fin" type="datetime-local" name="Fecha_Fin" />
                     </div>
 
 					</form>
@@ -132,6 +132,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   calendar.render();
 });
+
+function agregarEvento()
+{
+	document.getElementById("form_evento").submit();
+}
 
 </script>
 
