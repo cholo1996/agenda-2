@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 21-01-2023 a las 18:25:01
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 7.4.30
+-- Servidor: localhost
+-- Tiempo de generación: 03-02-2023 a las 20:21:04
+-- Versión del servidor: 8.0.17
+-- Versión de PHP: 7.3.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,12 +31,12 @@ SET time_zone = "+00:00";
 CREATE TABLE `cita` (
   `id` int(11) NOT NULL,
   `titulo` varchar(255) NOT NULL,
-  `descripción` text NOT NULL,
+  `descripcion` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `color` varchar(7) NOT NULL,
   `listado` varchar(255) NOT NULL,
-  `fecha inicio` datetime NOT NULL,
-  `fecha fin` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `fecha_inicio` datetime NOT NULL,
+  `fecha_fin` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Índices para tablas volcadas
